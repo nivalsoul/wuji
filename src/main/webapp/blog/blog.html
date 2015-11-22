@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Coding 博客</title>
+    <link rel="stylesheet" href="client.css">
+</head>
+<body>
+<div id="blogApp">
+    <div>
+        <div>
+            <header class="blog-header">
+                <div class="container clearfix">
+                    <section class="logo clearfix">
+                        <a href="https://coding.net"><img src="img/log.png"></a>
+                        <a href="/"><img src="img/blogWord.png"></a>
+                        <div class="pull-right toggle-menu-box">
+                            <span class="toggle-menu">
+                                <i class="fa fa-bars fa-lg"></i>
+                            </span>
+                        </div>
+                    </section>
+                    <section class="menus clearfix">
+                        <ul>
+                            <li class=""><a
+                                    href="/product/blogs"><i
+                                    class="fa fa-cube"></i><span
+                                    >产品</span></a></li>
+                            <li class="active"><a
+                                    href="/design/blogs"><i
+                                    class="fa fa-magic"></i><span
+                                    >设计</span></a></li>
+                            <li class=""><a
+                                    href="/technology/blogs"><i
+                                    class="fa fa-code"></i><span
+                                    >技术</span></a></li>
+                            <li class=""><a
+                                    href="/update/blogs"><i
+                                    class="fa fa-refresh"></i><span
+                                    >更新</span></a></li>
+                        </ul>
+                        <section class="search pull-right">
+                            <div class="search-input">
+                                <form method="get" action="/search">
+                                    <div class="search-input-content"><input
+                                            type="text" name="key"><i
+                                            class="fa fa-search"></i></div>
+                                </form>
+                            </div>
+                        </section>
+                    </section>
+                </div>
+            </header>
+            <div class="main-container">
+                <section class="blog-box-container">
+                    <div class="blog-timeline-box">
+                        <div class="blog-timeline"><a
+                                href="/design/blogs">
+                            <div class="blog-category"><i
+                                    class="fa fa-magic"></i></div>
+                        </a>
+
+                            <div class="blog-time">11月10日</div>
+                            <div class="blog-author"><img
+
+                                    src="img/fluit-1.png" class="avatar"><a
+                                    href="/author/t-baby-zomake">t-baby-zomake</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-concise-box">
+                        <div class="blog-concise">
+                            <div class="blog-title"><a
+
+                                    href="#">利用GitHook构建持续交付和部署</a></div>
+                            <div class="blog-cover"><img
+
+                                    src="img/coding.png">
+                            </div>
+                            <div
+                                    class="ellipsis-text blog-content mui-ellipsis-3">1、为什么要打造可持续交付和部署 软件发布是一个令人头痛的过程，非常耗时且风险很高。对于小团队来说一般分为两种：“签入时交付”和“定时交付”。 “签入时交付”策略的优势在于马上产生的满足感。根据代码库的规模，从签入新功能代码到能够在交付准备服务器上测试，一两分钟就够了。 这种方式的主要问题在于：交付准备服务器会被蹂躏得不稳定。很多时候，我见到有人试图测试某个功能，突然新的版本推到交付准备服务器上…</div>
+                            <div class="blog-operate"><span
+                                    ><a
+
+                                    href="https://blog.coding.net/blog/githook"><i
+
+                                    class="fa fa-edit-alt"></i></a></span><span
+                                    ><a
+                                    href=""><i
+                                    class="fa fa-trash"></i></a></span>
+                            </div>
+                            <div class="blog-stat"><span
+                                    class="blog-views"><a
+
+                                    href="https://blog.coding.net/blog/githook"><i
+                                    class="fa fa-eye"></i><span
+                                    >6</span></a></span><span
+                                    class="blog-comments"><a
+
+                                    href="https://blog.coding.net/blog/githook#comments"><i
+                                    class="fa fa-comment"></i><span
+                                    >0</span></a></span></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="blog-box-container">
+                    <div class="blog-timeline-box">
+                        <div class="blog-timeline"><a
+                                href="/design/blogs">
+                            <div class="blog-category"><i
+                                    class="fa fa-magic"></i></div>
+                        </a>
+
+                            <div class="blog-time">11月10日</div>
+                            <div class="blog-author"><img
+
+                                    src="img/fluit-1.png"
+                                    class="avatar"><a href="/author/samlee">bbear</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-concise-box">
+                        <div class="blog-concise">
+                            <div class="blog-title"><a
+
+                                    href="https://blog.coding.net/blog/General-architecture-for-Java-applications">java应用一般架构</a>
+                            </div>
+                            <div class="blog-cover"><img
+
+                                    src="img/coding.png">
+                            </div>
+                            <div
+                                    class="ellipsis-text blog-content mui-ellipsis-3">当我们架设一个系统的时候通常需要考虑到如何与其他系统交互，所以我们首先需要知道各种系统之间是如何交互的，使用何种技术实现。 1. 不同系统不同语言之间的交互 现在我们常见的不同系统不同语言之间的交互使用WebService，Http请求。WebService，即“Web 服务”，简写为 WS。从字面上理解，它其实就是“基于 Web 的服务”。而服务却是双方的，有服务需求方，就有服务提供方。服务提…</div>
+                            <div class="blog-operate"><span
+                                    ><a
+
+                                    href="https://blog.coding.net/blog/General-architecture-for-Java-applications"><i
+
+                                    class="fa fa-edit-alt"></i></a></span><span
+                                    ><a
+                                    href=""><i
+                                    class="fa fa-trash"></i></a></span>
+                            </div>
+                            <div class="blog-stat"><span
+                                    class="blog-views"><a
+
+                                    href="https://blog.coding.net/blog/General-architecture-for-Java-applications"><i
+                                    class="fa fa-eye"></i><span
+                                    >6</span></a></span><span
+                                    class="blog-comments"><a
+
+                                    href="https://blog.coding.net/blog/General-architecture-for-Java-applications#comments"><i
+                                    class="fa fa-comment"></i><span
+                                    >0</span></a></span></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="blog-box-container">
+                    <div class="blog-timeline-box">
+                        <div class="blog-timeline"><a
+                                href="/design/blogs">
+                            <div class="blog-category"><i
+                                    class="fa fa-magic"></i></div>
+                        </a>
+
+                            <div class="blog-time">11月09日</div>
+                            <div class="blog-author"><img
+
+                                    src="img/fluit-1.png"
+                                    class="avatar"><a href="/author/lyywhg">AdorkableDean</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-concise-box">
+                        <div class="blog-concise">
+                            <div class="blog-title"><a
+
+                                    href="https://blog.coding.net/blog/statistics-of-IOS-project-pictures">iOS项目统计图片使用情况</a>
+                            </div>
+                            <div class="blog-cover"><img
+
+                                    src="img/coding.png">
+                            </div>
+                            <div
+                                    class="ellipsis-text blog-content mui-ellipsis-3">随着项目开发推进和版本迭代，项目中总会存在一些无效的图片资源，这些无效图片往往会增加编译成本和包的大小。 一个普通的iOS工程会有大约三分之一的图片是未使用的。 常用的方法有： 1，利用工具； 2，利用脚本； 3，添加图片时候写图片名称的代码； 脚本&amp;工具的原理大概是这样，在工程中搜图片名称，如果没有使用这个图片名称的话，则认为这张图片没有被使用并列举出来。这种做法不太精准： 1，遇到用imag…</div>
+                            <div class="blog-operate"><span
+                                    ><a
+
+                                    href="https://blog.coding.net/blog/statistics-of-IOS-project-pictures"><i
+
+                                    class="fa fa-edit-alt"></i></a></span><span
+                                    ><a
+                                    href=""><i
+                                    class="fa fa-trash"></i></a></span>
+                            </div>
+                            <div class="blog-stat"><span
+                                    class="blog-views"><a
+
+                                    href="https://blog.coding.net/blog/statistics-of-IOS-project-pictures"><i
+                                    class="fa fa-eye"></i><span
+                                    >25</span></a></span><span
+                                    class="blog-comments"><a
+
+                                    href="https://blog.coding.net/blog/statistics-of-IOS-project-pictures#comments"><i
+                                    class="fa fa-comment"></i><span
+                                    >1</span></a></span></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="blog-box-container">
+                    <div class="blog-timeline-box">
+                        <div class="blog-timeline"><a
+                                href="/design/blogs">
+                            <div class="blog-category"><i
+                                    class="fa fa-magic"></i></div>
+                        </a>
+
+                            <div class="blog-time">09月06日</div>
+                            <div class="blog-author"><img
+
+                                    src="img/fluit-1.png"
+                                    class="avatar"><a
+                                    href="/author/zhangyuhan">zhangyuhan</a></div>
+                        </div>
+                    </div>
+                    <div class="blog-concise-box">
+                        <div class="blog-concise">
+                            <div class="blog-title"><a
+
+                                    href="https://blog.coding.net/blog/500px-guide-animation-realization">一步一步实现500px引导动画
+                                -- 酷酷哒</a></div>
+                            <div class="blog-cover"><img
+
+                                    src="img/coding.png">
+                            </div>
+                            <div
+                                    class="ellipsis-text blog-content mui-ellipsis-3">作者： 张玉涵（Coding 用户） 简介： 一枚小小的Android工程师 Coding 主页： https://coding.net/u/zhangyuhan 下了500px应用, 瞬间被它的引导动画吸引住了,下面一步一步来实现引导动画 最终效果图: 清晰版 下面的小圆点简单的,就先省略,重点在切换动画 创建viewpager 可以左右随手指滑动的只有底部文字部分,所以ViewPager中存…</div>
+                            <div class="blog-operate"><span
+                                    ><a
+
+                                    href="https://blog.coding.net/blog/500px-guide-animation-realization"><i
+
+                                    class="fa fa-edit-alt"></i></a></span><span
+                                    ><a
+                                    href=""><i
+                                    class="fa fa-trash"></i></a></span>
+                            </div>
+                            <div class="blog-stat"><span
+                                    class="blog-views"><a
+
+                                    href="https://blog.coding.net/blog/500px-guide-animation-realization"><i
+                                    class="fa fa-eye"></i><span
+                                    >2028</span></a></span><span
+                                    class="blog-comments"><a
+
+                                    href="https://blog.coding.net/blog/500px-guide-animation-realization#comments"><i
+                                    class="fa fa-comment"></i><span
+                                    >11</span></a></span></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="blog-box-container">
+                    <div class="blog-timeline-box">
+                        <div class="blog-timeline"><a
+                                href="/design/blogs">
+                            <div class="blog-category"><i
+                                    class="fa fa-magic"></i></div>
+                        </a>
+
+                            <div class="blog-time">10月31日</div>
+                            <div class="blog-author"><img
+
+                                    src="img/fluit-1.png"
+                                    class="avatar"><a href="/author/zengsha">Summer</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-concise-box">
+                        <div class="blog-concise">
+                            <div class="blog-title"><a
+
+                                    href="https://blog.coding.net/blog/how-to-design-a-great-logo">如何设计一个“高大上”的 logo</a>
+                            </div>
+                            <div class="blog-cover"><img
+
+                                    src="img/coding.png">
+                            </div>
+                            <div
+                                    class="ellipsis-text blog-content mui-ellipsis-3">前不久，我们老大写的一篇博客《 Coding，做一个有情怀的产品
+                                》中有提到设计 Coding logo 的大致由来，今天我就设计 Coding 猴头的过程具体说说如何设计一个 logo。方法仅供参考，如有雷同，纯属巧合… 第一步：搞清楚需求&mdash;&mdash;我们需要一个什么样的
+                                logo 工具：交流（如果这也算的话） 对于整个 Coding 的 logo，老大跟我说明了他的想法，主要思路是：卡通形象（猴子）…
+                            </div>
+                            <div class="blog-operate"><span
+                                    ><a
+
+                                    href="https://blog.coding.net/blog/how-to-design-a-great-logo"><i
+
+                                    class="fa fa-edit-alt"></i></a></span><span
+                                    ><a
+                                    href=""><i
+                                    class="fa fa-trash"></i></a></span>
+                            </div>
+                            <div class="blog-stat"><span
+                                    class="blog-views"><a
+
+                                    href="https://blog.coding.net/blog/how-to-design-a-great-logo"><i
+                                    class="fa fa-eye"></i><span
+                                    >3482</span></a></span><span
+                                    class="blog-comments"><a
+
+                                    href="https://blog.coding.net/blog/how-to-design-a-great-logo#comments"><i
+                                    class="fa fa-comment"></i><span
+                                    >25</span></a></span></div>
+                        </div>
+                    </div>
+                </section>
+                <div class="blog-box-pager">
+                    <div></div>
+                </div>
+            </div>
+            <footer class="clearfix footer">
+                <div class="footer-content main-container">
+                    <div class="share">
+                        <div class="share-items">
+                            <div title="点击关注微博" class="weibo"><a
+                                    target="_blank"
+                                    href="//weibo.com/p/1006065153943878/home?from=page_100606&amp;mod=TAB#place"><img
+
+                                    src="data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABaAAD/4QN5aHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjMtYzAxMSA2Ni4xNDU2NjEsIDIwMTIvMDIvMDYtMTQ6NTY6MjcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6MjgwOThjYTktNGJiYi00ZGNiLTgwNDItNzhmZjg4YjBkNzdjIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkUyRkIwRjY4RThDNzExRTM5MTMwQTQ3RUNFRTg3RTQwIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkUyRkIwRjY3RThDNzExRTM5MTMwQTQ3RUNFRTg3RTQwIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzYgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyQzUyRDIyRDJEMjE2ODExODIyQUU5ODA2RjQyODBGRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyODA5OGNhOS00YmJiLTRkY2ItODA0Mi03OGZmODhiMGQ3N2MiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAOQWRvYmUAZMAAAAAB/9sAhAABAQEBAQEBAQEBAgEBAQICAgEBAgICAgICAgICAwIDAwMDAgMDBAQEBAQDBQUFBQUFBwcHBwcICAgICAgICAgIAQEBAQICAgUDAwUHBQQFBwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAj/wAARCAAmACYDAREAAhEBAxEB/8QAigAAAgMBAQAAAAAAAAAAAAAABgcFCAoACQEBAAMBAQAAAAAAAAAAAAAAAAYHCAMFEAABAwIFAgMGBgMAAAAAAAABAgMEBQYAERITByEIQXEUMVFhkbFCgcEiIxUJoTJSEQACAQQBAwMDBAMAAAAAAAABAgMAEQQFEiEGBzETCEFhIlGR0TJCMxT/2gAMAwEAAhEDEQA/AN9k6dGp0ZcqUvQ2j2DxUfAAeJOFKWFRvCpy1qTFV6Fj7UpyKyPio/llhSoZNbrCFaxU3yfcXVqHyJIwpRVSL0eS4hirAONK6erSMlJ+KgnoR5YUpjbrW1vbidnTq3cxp05Z55+7ClKi8KiuXU1RUq/Yg/pSnwKyM1H8vwwpVDe8nvd4b7KLDjXZyXNVUa/XS43ZliRXGkTqm61p1q1PEJZYbKk7jq+gzAAUohJi3dXd2LqYecvVj6KPU/wPvWgfj38bu4PI20ONr1CxR2MkrA8UB9B06sxseKj1sSSACRRvhf8AuD4X5w4/iU26q+jg/m67a+mjWLYkGR/LyZLbrsZMWQ5JnUtyNGZfcfLClvt5DIqBA6iqt15Dn2mmkjw5TjZx/wBfEpc2sbcpYpY1DC6ktG3262rTXkD4Bdw9s7cyQRnP1kMPuSysPbCkBuShUlDuyheYCNc3ANz0PpPwdfN2XFJuy2rwkO1Cdb7dNmwKnKisQah6WqKltemmMREpZ3mHYTiQ60Ah1BQsAZ4j/wAc/JO43LZOHsWaR4FikV3RY5eExlHtzRoAgkieF15oAsiFHCi9ZG8rdqa/CSHJwwFWUuhVWLpyj4HkjNduLrIp4sSyNyUk2q2EOpOO2vV4C1nVF2lMHPrtreSCPIH6409VO1C1tKkViphftL7pHkpZI/wcKVn475OPr4trm7ul5obp8NvnKrW5YlO7D+SrholPue3rXpyJbMa8XqZTq89GpUi6YjLkmbSoM99pElzQhCjqcGK1m1+Mm9efNAsVURFv6Dp+Q69A1+ov9D0+tbp1feW9yPEuNqu1nYSJLO2fHCSMl7sDC4Cn3HhEdlbhezLZ7fjegHE1/c88gdovc5xZ3y1Kf3FdwF13Wwn+rqkVCjWw3z9AgtFQ/na8xYYfRRISn9t5qPJeLjaQ8yVOI2lHh5BzNdPimFOMmSf6BLFg30N19AK9j4Zdsd7anfrs8ky4OjjJ/wCp8otHBJHY8o+MpHuO3ooAJBPLpY1pt7VbW5atDt/4to3PdaTcvM8WlMo5Ar5Uh6Q9I3HFstPvoJ33WGVoaW7qOtSSrM55mY9t4M0OKpyLGcgc2sLm17Aketgbfv8ArWVvOG80Ww7qy5dInta4yH2k6gAWAJVf8VZgWC2HEECwtarMwUqMKtLH+iWGwrzMpoj6HEgqp6Kr0pDiXhVmEFTTgCZeX2qH6Qo/AjphSgHCldhSuAz6DqT7BhSmLHt+Sxa89sMk1CdtrUz9wQ24FhPnkCcvwwpR+7tbTm/p2dJ3dWWnTl1zz6ZZYUpU1KHa7ri1wKv6VWZzYU08tvP4EJzA+eFKhUwYRVkutMJR/wBBuUT8i0PrhSjG349rsSWgieJ1QJ/ZU42ttAV4aQsAZ+7M+WFKYeFK/9k="></a>
+                            </div>
+                            <div title="点击关注微信公众号" class="wechat"><img
+
+                                    src="data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABaAAD/4QN5aHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjMtYzAxMSA2Ni4xNDU2NjEsIDIwMTIvMDIvMDYtMTQ6NTY6MjcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6MjgwOThjYTktNGJiYi00ZGNiLTgwNDItNzhmZjg4YjBkNzdjIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkUyRkIwRjY0RThDNzExRTM5MTMwQTQ3RUNFRTg3RTQwIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkUyRkIwRjYzRThDNzExRTM5MTMwQTQ3RUNFRTg3RTQwIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzYgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyQzUyRDIyRDJEMjE2ODExODIyQUU5ODA2RjQyODBGRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyODA5OGNhOS00YmJiLTRkY2ItODA0Mi03OGZmODhiMGQ3N2MiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAOQWRvYmUAZMAAAAAB/9sAhAABAQEBAQEBAQEBAgEBAQICAgEBAgICAgICAgICAwIDAwMDAgMDBAQEBAQDBQUFBQUFBwcHBwcICAgICAgICAgIAQEBAQICAgUDAwUHBQQFBwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAj/wAARCAAmACYDAREAAhEBAxEB/8QAkAAAAgMBAQAAAAAAAAAAAAAABgcFCAkKBAEBAAEDBQAAAAAAAAAAAAAAAAcFBgkBAgMECBAAAQMDAwICCQMFAAAAAAAAAQIDBBEFBgASByETcQgxQVFhkbEiQhSBwSOhMlIkFREAAgECBAUDAgcAAAAAAAAAAQIAEQMhBAUGMUFREgdhIggTI/CBkeEyUhT/2gAMAwEAAhEDEQA/AO+ydOjW6MuVKXsbR6B61H1AD1k6RFhccwuctakxVfgsfalNCsj3qP7U0iQyb3eEK3i5vk+wurUPgSRpEKrRmjyXEMXYBxpXT8tIopPvUE9CPDSIxu612u93E9nbu7tRt20rWvs0iKjMLiuXc1RUq/gg/SlPqKyKqP7fppExe8zvnR5HYzvkbAeG80snG0PiVhxV3vV0MFV1yC5MPoYeg2pq5MyWVuNqWU9st7lbVKCgKA+JfL/yC1a3qGZyWkPasjJrW49ync7AgFLSsCCwriCKnGnrYGubmvC69uwQv0xiTxJ6ARdcCed7niPPxy9ci5Vb+XMVv9zctuRYdEiQE5XYoyEIULmuPY4cZLcVW/6C6Fd0gpSUHqLT8YfIvcoaze1FkzWWvXDbIRQL1ulPuMiKB9PHiRjyphOlpG6c3VWukOrGmH8h60HKbbNOtvNtvMuJdadAU06khSVJUKggjoQdZBVYEVEkwGGMO5OO4vd4C1ndF7SmDXr21vJBHgD89axIW9pUi8XML9JfdI8FLJH9DpE5+/On5UeQGue8lvXEONXLkmPyBHdyO82C3Q1vSbLIeeLLwdVuCVtynkLcZAIWTvSEkICjjE+RHhPVE3Ncv6bafMrmQbpVFJa2a0avKjNUrzPuFPbWRHujQLwzZa0C/f7qDl1/U8P2lTs8dZwqZmnFF9sFxgv4zGgRcct35ci1f867OtR50ufcYiUf7z0hDhSEvEBCduylNRDuXNLpTX9LdLiG0qBKHs+4QrO94cXLA0UHBRSkoebYWS1kgjtApyx4kt1r05S3fkH5eudu53wfjPCIE62YRktkeazXF37i7cYjl1t0JyS9eY6HEITE7jgbQWkDaAqhKiU7Z2+M/kXMJuOxpuW+p/lu2iLiu3eBcRSWuJ/RWNB28MetJce09UYZpbSV7CuIJriOJHQek36gpUYV6WP7EsNhXiZTRHyOskclWFWaWhxLwuzCCppwBMun2qH0hR9xHTSIBVNKV6D0Dx0iVW518m3B/mDu8fJ8ytMyz5gwyiO5l1lliBNkx2q9tuSFtvMvBFfpK2ypI6BQHTUJ+S/AG3t03xmMyrJfAp32z2sQOAaoKtTkSKgYVphLf1bbOVzjd7ghuowP59Z7OA/KVxT5cbrf7vx6mfLuGTRI0S53C7PMT5aURnVu0YfSy0plDpWC62n6FlCDQFNTz+MPBui7SvXLuT7me4oUlyGYAEn2mgIDV9wGBIU8pv0jb2XyTFrdSSOeP49ZeGPj8ljF57YZJuE7trUz9wQ24FhPjQE0/TUyyuw/d7Xac7+3s7T3d1Nu2nWtelKaRFTcoeLuuLXAu/4qqmrCmnlt19xCagfHSJCpgwiqi70wlH+QblE/AtD56RDHH4+LsSWgieJ1wJ/hU42ttAV6toWAK+yp8NIjD0if/9k=">
+
+                                <div class="qr_code animated zoomOutDown"><img
+
+                                        src="/build/fcdf6ecd90f6022d143a5e06fbe391b8.jpg"></div>
+                            </div>
+                            <div title="点击订阅RSS" class="rss"><a
+                                    target="_blank" href="/blogs/rss"><i
+                                    class="fa fa-rss"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="site-meta">
+                        <div><span>Copyright&nbsp;&copy;&nbsp;2015&nbsp;</span><a
+                                href="https://coding.net/">Coding.net</a><span
+                                >&nbsp;&nbsp; 粤ICP备14029750号-1&nbsp;&nbsp;粤B-20140247&nbsp;&nbsp;广东省工商行政管理局</span>
+                        </div>
+                        <div class="links">
+                            <ul>
+                                <li><a
+                                        target="_self"
+                                        href="//coding.net/home-desktop.html?redirect=false">首页</a></li>
+                                <li><a
+                                        target="_self"
+                                        href="//coding.net/about">关于Coding</a></li>
+                                <li><a
+                                        target="_self"
+                                        href="//coding.net/jobs">招贤纳士</a></li>
+                                <li><a
+                                        target="_self"
+                                        href="//coding.net/terms">服务条款</a></li>
+                                <li><a
+                                        target="_self"
+                                        href="//coding.net/privacy">隐私策略</a></li>
+                                <li><a
+                                        target="_self"
+                                        href="//coding.net/help">帮助中心</a></li>
+                                <li><a
+                                        target="_self"
+                                        href="//coding.net/app">App</a></li>
+                                <li><a
+                                        target="_self"
+                                        href="//coding.net/shop">Shop</a></li>
+                                <li><a
+                                        target="_self"
+                                        href="http://open.coding.net">API</a></li>
+                                <li><a
+                                        href="http://mart.coding.net/">码市</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="back-to-top animated show fadeOut"><a
+                            title="回到顶部" href="javascript:void(0);">
+                        <img width="32" src=""></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+</body>
+</html>

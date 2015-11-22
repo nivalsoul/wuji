@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>微信文章 - 无极</title>
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/client.css">
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="js/jquery-1.11.3.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/common.js"></script>
+<script src="js/weixin.js"></script>
+
+</head>
+<body>
+	<div id="wrap">
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed"
+						data-toggle="collapse" data-target="#bs-example-navbar-collapse-6"
+						aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					<span class="navbar-brand" style="padding:5px">
+					    <a href="javascript:void(0)" > 
+								<img class="img-rounded" src="images/wujiLogo.png" alt="主页" style="height: 40px">
+						</a>
+					</span>
+				</div>
+
+				<div class="collapse navbar-collapse"
+					id="bs-example-navbar-collapse-6">
+					<ul class="nav navbar-nav">
+						<li role="presentation" ><a href="index.html">主页</a></li>
+						<li role="presentation"><a href="yanlun.html">言论</a></li>
+						<li role="presentation" class="active"><a href="javascript:void(0)" >微信文章</a></li>
+						<li role="presentation"><a href="fun.html">开心一刻</a></li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+		</nav>
+
+		<div id="contentBody">
+			<div class="container">
+				<div class="row">
+					<div id="leftContent" class="col-md-9">
+						<ul id="articleTypes" class="nav nav-pills" style="margin-bottom:10px;padding-top:20px">
+						   <li class="active"><a href="javascript:void(0)" >热门</a></li>
+						   <li><a href="javascript:void(0)" >推荐</a></li>
+						   <li><a href="javascript:void(0)" >段子手</a></li>
+						   <li><a href="javascript:void(0)" >养生堂</a></li>
+						   <li><a href="javascript:void(0)" >私房话</a></li>
+						   <li><a href="javascript:void(0)" >八卦精</a></li>
+						   <li><a href="javascript:void(0)" >爱生活</a></li>
+						   <li class="dropdown">
+						      <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" >
+						         各种迷<span class="caret"></span>
+						      </a>
+						      <ul class="dropdown-menu">
+						         <li><a href="javascript:void(0)" >财经迷</a></li>
+						         <li><a href="javascript:void(0)" >汽车迷</a></li>
+						         <li><a href="javascript:void(0)" >星座控</a></li>
+						         <li><a href="javascript:void(0)" >体育迷</a></li>
+						         <li><a href="javascript:void(0)" >科技咖</a></li>
+						         
+						      </ul>
+						   </li>
+						   <li class="dropdown">
+						      <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" >
+						         百家<span class="caret"></span>
+						      </a>
+						      <ul class="dropdown-menu">
+						         <li><a href="javascript:void(0)" >旅行家</a></li>
+						         <li><a href="javascript:void(0)" >美食家</a></li>
+						         <li><a href="javascript:void(0)" >古今通</a></li>
+						         <li><a href="javascript:void(0)" >学霸族</a></li>
+						      </ul>
+						   </li>
+						   <li class="dropdown">
+						      <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" >
+						         帮派<span class="caret"></span>
+						      </a>
+						      <ul class="dropdown-menu">
+						         <li><a href="javascript:void(0)" >潮人帮</a></li>
+						         <li><a href="javascript:void(0)" >辣妈帮</a></li>
+						         <li><a href="javascript:void(0)" >点赞党</a></li>
+						         <li><a href="javascript:void(0)" >职场人</a></li>
+						      </ul>
+						   </li>
+						</ul>
+						<div class="main-container">
+							<section id="article"  class="blog-box-container">
+								<div class="blog-timeline-box">
+									<div class="blog-timeline">
+									    <div align="center">
+											<a id="userLink" href="javascript:return false;" >
+												<img id="photo" class="media-object img-circle" 
+												    src="images/defaultphoto64.png" alt="点击访问用户主页">
+											</a>
+										</div>
+										<div id="pub_time" class="blog-time"></div>
+										<div class="blog-author">
+											<a id="author_name"  href="javascript:void(0)" ></a>
+										</div>
+									</div>
+								</div>
+								<div class="blog-concise-box">
+									<div class="blog-concise">
+										<div class="blog-title">
+											<a id="article_title"  target="_blank"></a>
+										</div>
+										<!-- 文章图片 -->
+										<!-- <div class="blog-cover">
+											<img src="img/coding.png">
+										</div> -->
+										<blockquote id="quotationBlock">
+											<p id="quotation"></p> 
+											<small>引用文章：<cite id="ref_article"></cite></small>
+										</blockquote>
+										<div class="ellipsis-text blog-content mui-ellipsis-3">
+										    <div id="article_content"  class="articleCotentDiv" ></div>
+										</div>
+										<div class="blog-stat">
+											<span class="blog-views" title="浏览数">
+											    <a href="javascript:void(0)">
+											        <i class="fa fa-eye" ></i><span id="read_num"></span>
+											    </a>
+											</span>
+											<span class="blog-comments" title="评论数">
+											    <a href="javascript:void(0)">
+											        <i class="fa fa-comment" ></i><span id="comment_num"></span>
+											    </a>
+											</span>
+										</div>
+									</div>
+								</div>
+							</section>
+
+							<div class="blog-box-pager">
+								<div class="panel panel-default" >
+									<button id="loadMoreBtn" type="button" onclick="loadMore()"
+										class="btn btn-default btn-lg btn-block load-more" >加载更多</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="panel panel-default right-content">
+							<div class="panel-body">
+							    <div align="center"><img class="img-rounded" src="images/taiji.jpg" style="height: 220px"></div>
+							    <div>无极生太极，太极生两仪，两仪生四象，四象生八卦，八卦生六十四卦，六十四卦生宇宙万象。</div>
+							</div>
+						</div>
+
+						<div class="panel panel-default">
+							<div class="panel-body">
+							    <a type="button" class="btn btn-primary btn-lg" 
+							         href="view/write.html" target="_blank">写一个</a>
+							</div>
+						</div>
+					</div>
+					<div class="backtotop" title="返回顶部" ><span class="glyphicon glyphicon-open inner"></span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
