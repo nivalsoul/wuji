@@ -136,8 +136,11 @@ function setItem(comment){
 	var obj = $("#commentTemplate").clone();
 	obj.show();
 	obj.attr("id", "item-" + comment.id);
-	var userLink = "../user/"+comment.author;
-	$(obj).find("#userLink").attr("href",userLink);
+	if(comment.author!="visitor"){
+		var userLink = "../user/"+comment.author;
+		$(obj).find("#userLink").attr("href",userLink);
+		$(obj).find("#author_name").attr("href",userLink);
+	}
 	var photoUrl = "../images/defaultphoto64.png";
 	if(comment.photoUrl != null)
 		photoUrl = comment.photoUrl;
@@ -145,7 +148,6 @@ function setItem(comment){
 	$(obj).find("#content").html(comment.content);
 	$(obj).find("#content").attr("onclick", "setRefCommentId("+comment.id+")");
 	$(obj).find("#author_name").html(comment.author_name);
-	$(obj).find("#author_name").attr("href",userLink);
 	$(obj).find("#pub_time").html(comment.pub_time);
 	$(obj).find("#replyBtn").attr("onclick","reply("+comment.id+")");
 	var q = comment.quotation;

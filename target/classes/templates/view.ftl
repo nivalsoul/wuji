@@ -55,13 +55,13 @@
 				</div>
 				<div id="commentTemplate" style="display:none" >
 					<div class="media-left">
-						<a id="userLink" href="javascript:void(0)" target="_blank"> 
+						<a id="userLink"  target="_blank"> 
 						    <img id="photo" class="media-object img-circle" src="../images/defaultphoto64.png" alt="用户头像">
 						</a>
 					</div>
 					<div class="media-body">
 						<div style="font-size:12px;">
-						    <span><a id="author_name" href="javascript:void(0)" target="_blank">评论人</a>
+						    <span><a id="author_name"  target="_blank">评论人</a>
 						    </span>&nbsp;•&nbsp;
 						    <span id="pub_time">评论时间</span>
 						</div>
