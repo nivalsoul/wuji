@@ -3,6 +3,7 @@ package com.nivalsoul.controller;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.sql.Timestamp;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -64,7 +65,7 @@ public class UserInfoController {
 		if(userInfoManager.findByUseraccount(userinfo.getUseraccount())!=null)
 			return "用户名已经存在！";
 		userinfo.setPassword(MD5.getHashString(userinfo.getPassword()));
-		Timestamp timestamp = Timestamp.valueOf(java.time.LocalDateTime.now());
+		Timestamp timestamp = new Timestamp(new Date().getTime());
 		userinfo.setRegtime(timestamp);
 		userinfo.setLastlogintime(timestamp);
 		userinfo.setPhoto("images/defaultphoto64.png");

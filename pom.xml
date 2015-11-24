@@ -3,14 +3,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.nivalsoul</groupId>
 	<artifactId>wuji</artifactId>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<version>1.0</version>
 	<name>wuji Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	
 	<properties>
-	    <java.version>1.7</java.version>
-		<tomcat.version>7.0.59</tomcat.version>
+	    <!-- <java.version>1.7</java.version>
+		<tomcat.version>7.0.59</tomcat.version> -->
 		<start-class>com.nivalsoul.WujiApplication</start-class>
 	</properties>
 
@@ -64,7 +64,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
@@ -73,7 +73,7 @@
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
 			<scope>provided</scope>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>

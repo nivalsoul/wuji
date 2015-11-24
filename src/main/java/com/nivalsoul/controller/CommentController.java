@@ -22,7 +22,7 @@ import com.nivalsoul.model.ResultPage;
 import com.nivalsoul.service.CommentManager;
 import com.nivalsoul.utils.JsonUtils;
 
-@Controller  
+@Controller
 public class CommentController {
 	private static final Logger log = Logger.getLogger(CommentController.class);
 	

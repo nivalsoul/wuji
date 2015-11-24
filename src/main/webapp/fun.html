@@ -7,6 +7,7 @@
 <!-- 新 Bootstrap 核心 CSS 文件 -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/client.css">
 
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 <script src="js/jquery-1.11.3.min.js"></script>
@@ -15,7 +16,7 @@
 <script src="js/bootstrap.min.js"></script>
 
 <script src="js/common.js"></script>
-<script src="js/main.js"></script>
+<script src="js/fun.js"></script>
 
 </head>
 <body>
@@ -41,8 +42,9 @@
 					id="bs-example-navbar-collapse-6">
 					<ul class="nav navbar-nav">
 						<li role="presentation" ><a href="index.html">主页</a></li>
-						<li role="presentation" ><a href="weixin.html">微信公众号</a></li>
-						<li role="presentation" class="active"><a href="fun.html">开心一刻</a></li>
+						<li role="presentation" ><a href="yanlun.html">言论</a></li>
+						<li role="presentation"><a href="weixin.html">微信文章</a></li>
+						<li role="presentation" class="active"><a href="javascript:void(0)">开心一刻</a></li>
 					</ul>
 				</div>
 				<!-- /.navbar-collapse -->
@@ -52,31 +54,71 @@
 		<div id="contentBody">
 			<div class="container">
 				<div class="row">
-					<div id="leftContent" class="col-md-9">
-						<div id="article" class="panel panel-info">
-							<div class="panel-heading">
-							    <h3><a id="article_title"  target="_blank"></a></h3>
+					<div id="left-content" class="col-md-9">
+						<div class="main-container">
+							<section id="article"  class="blog-box-container">
+								<div class="blog-timeline-box">
+									<div class="blog-timeline">
+									    <div align="center">
+											<a id="userLink" href="javascript:void(0)" target="_blank">
+												<img id="photo" class="media-object img-circle" 
+												    src="images/defaultphoto64.png" alt="点击访问用户主页">
+											</a>
+										</div>
+										<div id="pub_time" class="blog-time"></div>
+										<div class="blog-author">
+											<a id="author_name"  href="javascript:void(0)" target="_blank"></a>
+										</div>
+									</div>
+								</div>
+								<div class="blog-concise-box">
+									<div class="blog-concise">
+										<div class="blog-title">
+											<a id="article_title"  target="_blank"></a>
+										</div>
+										<!-- 文章图片 -->
+										<!-- <div class="blog-cover">
+											<img src="img/coding.png">
+										</div> -->
+										<blockquote id="quotationBlock">
+											<p id="quotation"></p> 
+											<small>引用文章：<cite id="ref_article"></cite></small>
+										</blockquote>
+										<div class="ellipsis-text blog-content mui-ellipsis-3">
+										    <div id="article_content"  class="articleCotentDiv" ></div>
+										</div>
+										<div class="blog-stat">
+											<span class="blog-views" title="浏览数">
+											    <a href="javascript:void(0)">
+											        <i class="fa fa-eye" ></i><span id="read_num"></span>
+											    </a>
+											</span>
+											<span class="blog-comments" title="评论数">
+											    <a href="javascript:void(0)">
+											        <i class="fa fa-comment" ></i><span id="comment_num"></span>
+											    </a>
+											</span>
+										</div>
+									</div>
+								</div>
+							</section>
+
+							<div class="blog-box-pager">
+								<div class="panel panel-default" >
+									<button id="loadMoreBtn" type="button" onclick="loadMore()"
+										class="btn btn-default btn-lg btn-block load-more" >加载更多</button>
+								</div>
 							</div>
-							<div class="panel-body">
-								<p><span id="author_name"></span> <span id="pub_time"></span></p>
-								<div id="article_content" ></div>
-							</div>
-						</div>
-						
-						<div class="panel panel-default" >
-							<button id="loadMoreBtn" type="button" onclick="loadMore()"
-								class="btn btn-default btn-lg btn-block load-more" >加载更多</button>
-						</div>
+						</div>	
 					</div>
 					<div class="col-md-3">
-						<div class="panel panel-default">
+						<div class="panel panel-default right-content">
 							<div class="panel-body">
-								<div align="center"><img class="img-rounded" src="images/taiji.jpg" style="height: 220px"></div>
+							    <div align="center"><img class="img-rounded" src="images/taiji.jpg" style="height: 220px"></div>
 							    <div>无极生太极，太极生两仪，两仪生四象，四象生八卦，八卦生六十四卦，六十四卦生宇宙万象。</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-md-3">
+
 						<div class="panel panel-default">
 							<div class="panel-body">
 							    <a type="button" class="btn btn-primary btn-lg" 

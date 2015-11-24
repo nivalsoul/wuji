@@ -19,7 +19,7 @@ import com.alibaba.fastjson.JSON;
 import com.nivalsoul.model.Article;
 import com.nivalsoul.service.ArticleManager;
 
-@Controller  
+@Controller
 public class ArticleController {
 	private static final Logger log = Logger.getLogger(ArticleController.class);
 	
