@@ -119,7 +119,10 @@ public class UserInfoController {
 		}
 		//设置session和cookie
 		setSessionCookie(request, response, userinfo);
-	    
+	    //更新登录信息
+		userinfo.setLastlogintime(new Timestamp(new Date().getTime()));
+		userInfoManager.saveUserInfo(userinfo);
+		
         return result;
     }
 	
