@@ -5,6 +5,9 @@ var pageSize=10;
 var source = "微信";
 
 $(function() {
+	//设置导航菜单
+	setMenu("weixin");
+	
 	getArticles(source, "热门", 0);
 	
 	$("#articleTypes").find("li a").each(function(){

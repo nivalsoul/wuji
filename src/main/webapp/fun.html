@@ -11,6 +11,7 @@
 
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 <script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
 
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="js/bootstrap.min.js"></script>
@@ -21,34 +22,8 @@
 </head>
 <body>
 	<div id="wrap">
-		<nav class="navbar navbar-default navbar-fixed-top">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed"
-						data-toggle="collapse" data-target="#bs-example-navbar-collapse-6"
-						aria-expanded="false">
-						<span class="sr-only">Toggle navigation</span> <span
-							class="icon-bar"></span> <span class="icon-bar"></span> <span
-							class="icon-bar"></span>
-					</button>
-					<span class="navbar-brand" style="padding:5px">
-					    <a href="#"> 
-								<img class="img-rounded" src="images/wujiLogo.png" alt="主页" style="height: 40px">
-						</a>
-					</span>
-				</div>
-
-				<div class="collapse navbar-collapse"
-					id="bs-example-navbar-collapse-6">
-					<ul class="nav navbar-nav">
-						<li role="presentation" ><a href="index.html">主页</a></li>
-						<li role="presentation" ><a href="yanlun.html">言论</a></li>
-						<li role="presentation"><a href="weixin.html">微信文章</a></li>
-						<li role="presentation" class="active"><a href="javascript:void(0)">开心一刻</a></li>
-					</ul>
-				</div>
-				<!-- /.navbar-collapse -->
-			</div>
+		<nav id="topMenu" class="navbar navbar-default navbar-fixed-top">
+			
 		</nav>
 
 		<div id="contentBody">
@@ -121,12 +96,17 @@
 
 						<div class="panel panel-default">
 							<div class="panel-body">
-							    <a type="button" class="btn btn-primary btn-lg" 
-							         href="view/write.html" target="_blank">写一个</a>
+							    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="toWrite()">写一个</button>
 							</div>
 						</div>
 					</div>
+				</div><!-- end row -->
+				
+				<!-- login and register modal -->
+				<div id="loginRegDIv" class="row" >
+					
 				</div>
+				
 			</div>
 		</div>
 	</div>
