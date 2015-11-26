@@ -59,6 +59,14 @@ function getArticles(source, article_type, pageNum) {
 				url = article.article_link;
 			$(obj).find("#article_title").attr("href",url);
 			$(obj).find("#author_name").html(article.author_name);
+			if(article.author!="visitor"){
+				var userLink = "user/"+article.author;
+				$(obj).find("#userLink").attr("href",userLink);
+				$(obj).find("#author_name").attr("href",userLink);
+			}else{
+				$(obj).find("#userLink").removeAttr("href");
+				$(obj).find("#author_name").removeAttr("href");
+			}
 			var pubTime = article.pub_time;
 			if(pubTime.substring(0,11) == ymd)
 				pubTime = pubTime.substring(12);

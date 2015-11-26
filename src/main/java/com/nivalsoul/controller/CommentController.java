@@ -3,6 +3,7 @@ package com.nivalsoul.controller;
 import java.sql.Timestamp;
 import java.util.Date;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -11,14 +12,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.nivalsoul.model.Article;
 import com.nivalsoul.model.Comment;
 import com.nivalsoul.model.ResultPage;
+import com.nivalsoul.service.ArticleManager;
 import com.nivalsoul.service.CommentManager;
 import com.nivalsoul.utils.JsonUtils;
 
@@ -28,6 +32,12 @@ public class CommentController {
 	
 	@Autowired
 	private CommentManager commentManager;
+	
+	private ArticleManager articleManager;
+	@Autowired
+	public void setArticleManager(ArticleManager articleManager) {
+		this.articleManager = articleManager;
+	}  
 	
 	@RequestMapping(value="/comment", method = RequestMethod.GET)  
     @ResponseBody
@@ -42,6 +52,7 @@ public class CommentController {
 	
 	@RequestMapping(value="/comment", method = RequestMethod.POST)  
 	@ResponseBody
+	@Transactional
     public String saveComment(Comment comment, 
     		HttpServletRequest request){
 		log.info("save comment:"+JsonUtils.beanToJson(comment));
@@ -58,6 +69,11 @@ public class CommentController {
 		comment.setPub_time(new Timestamp(new Date().getTime()));
 		comment.setPraise_num(0);
         commentManager.saveComment(comment);
+        //更新文章评论数
+        Article article = articleManager.getArticleById(comment.getArticle_id());
+        article.setComment_num(article.getComment_num()+1);
+        articleManager.saveArticle(article);
+        
         return "ok";
     }  
 	
@@ -67,5 +83,6 @@ public class CommentController {
         log.info("delete comment by commentId:"+id);  
         commentManager.deleteComment(id);
         return "ok";
-    }  
+    }
+
 }
