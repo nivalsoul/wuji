@@ -3,7 +3,6 @@ package com.nivalsoul.controller;
 import java.sql.Timestamp;
 import java.util.Date;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 

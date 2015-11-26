@@ -7,6 +7,9 @@
 
 <link rel="stylesheet" href="../css/bootstrap.min.css">
 <link rel="stylesheet" href="../css/main.css">
+<!--引入wangEditor.css-->
+<link rel="stylesheet" type="text/css" href="../css/wangEditor-1.3.12.css">
+
 
 <script src="../js/jquery-1.11.3.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
@@ -67,6 +70,17 @@
 			</div>
 		</div>
 	</div>
-
 </body>
+<!--引入wangEditor.js，放在body最后，否则可能会出现问题-->
+<script type="text/javascript" src="../js/wangEditor-1.3.12.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+    	//初始化textarea为富文本编辑器
+    	var arry = new Array();
+    	for(var i=1;i<100;i++){
+    		arry.push("../expressions/"+i+".gif");
+    	}
+        var editor = $('#article_content').wangEditor({'expressions': arry});
+    });
+</script>
 </html>
