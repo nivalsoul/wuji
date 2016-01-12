@@ -19,4 +19,14 @@ $(function() {
 			$("#quotationDiv").hide();
 		}
 	});
+	
+	//初始化textarea为富文本编辑器
+	var arry = new Array();
+	for(var i=1;i<100;i++){
+		arry.push("../expressions/"+i+".gif");
+	}
+    var editor = $('#article_content').wangEditor({
+    	'expressions': arry,
+    	uploadUrl: '/wuji/data/uploadImg'   //跨域图片上传的url
+    });
 });

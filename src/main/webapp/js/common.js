@@ -1,5 +1,6 @@
 
 function setMenu(tabId){
+	//加载顶部导航栏
 	$("#topMenu").load("menu.html #topMenuContent",function(){
     	$("#menuTabs li").each(function(){
     		var id=$(this).attr("id");
@@ -14,9 +15,10 @@ function setMenu(tabId){
     	//设置登录信息
     	setUserInfo();
     });
-	
+	//加载登录注册部分
 	$("#loginRegDIv").load("menu.html #loginRegContent",function(){
-    	
+    	//设置注册表单事件
+		setFormEvent();
     });
 }
 
@@ -46,7 +48,7 @@ function getArticles(source, article_type, pageNum) {
 	}
 	var d = new Date();
 	var ymd = d.getFullYear()+"-"+(d.getMonth() + 1)+"-"+d.getDate(); 
-	$.getJSON("article2", {"source":source, "article_type":article_type, "page":pageNum, "size":pageSize},function(data) {
+	$.getJSON("article", {"source":source, "article_type":article_type, "page":pageNum, "size":pageSize},function(data) {
 		var list = data.content;
 		last = data.last;
 		number = data.number+1;
@@ -118,33 +120,34 @@ function login(){
 	);
 }
 
-function toReg(){
-	$("#loginDiv").hide();
-	$("#regDiv").show();
-	$("#myModalLabel").html("用户注册");
-}
 
-function register(){
-	var useraccount = $("#regForm #useraccount").val();
-	var username = $("#regForm #username").val();
-	var email = $("#regForm #email").val();
-	var password = $("#regForm #password").val();
-	$.post("user", {"useraccount" : useraccount, "username" : username,
-		"email" : email, "password" : password}, 
-		function(data, status) {
-			if(data=="ok"){
-				alert("注册成功！已自动登录。");
-				$("#loginModal").modal('hide');
-				$("#loginBtn").hide();
-				$("#userProfile").show();
-				$("#un").html(username);
-				$("#ua").attr("href", "user/"+useraccount);
-			}else{
-				alert(data);
+function setFormEvent(){
+	//设置注册表单事件
+	$("#regForm").submit(function(){
+		var useraccount = $("#regForm #useraccount").val();
+		var username = $("#regForm #username").val();
+		var email = $("#regForm #email").val();
+		var password = $("#regForm #password").val();
+		$.post("user", {"useraccount" : useraccount, "username" : username,
+			"email" : email, "password" : password}, 
+			function(data, status) {
+				if(data=="ok"){
+					alert("注册成功！已自动登录。");
+					$("#loginModal").modal('hide');
+					$("#loginBtn").hide();
+					$("#userProfile").show();
+					$("#un").html(username);
+					$("#ua").attr("href", "user/"+useraccount);
+				}else{
+					alert(data);
+				}
 			}
-		}
-	);
-}
+		);
+		//阻止表单自动提交
+		return false;
+	});
+};
+
 
 function logout(){
 	$.post("user/logout", {}, 
@@ -154,6 +157,8 @@ function logout(){
 				$("#userProfile").hide();
 				$("#un").html("");
 				$("#ua").attr("href", "#");
+				$("#loginDiv").show();
+				$("#regDiv").hide();
 				$.cookie("useraccount", null ,{path:"/"});
 				$.cookie("username", null ,{path:"/"});
 			}else{
@@ -161,6 +166,12 @@ function logout(){
 			}
 		}
 	);
+}
+
+function toReg(){
+	$("#loginDiv").hide();
+	$("#regDiv").show();
+	$("#myModalLabel").html("用户注册");
 }
 
 function toWrite(){
