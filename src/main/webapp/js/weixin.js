@@ -3,21 +3,35 @@ var number=0;
 var pageSize=10;
 
 var source = "微信";
-
+var articleType = "热门";
 $(function() {
 	//设置导航菜单
 	setMenu("weixin");
 	
-	getArticles(source, "热门", 0);
+	getArticles(source, articleType, 0);
 	
 	$("#articleTypes").find("li a").each(function(){
 		var a = $(this);
-		a.attr("onclick",'getArticles("'+source+'", "'+a.html()+'", 0)');
+		a.attr("onclick",'change(this,"'+a.html()+'");getArticles("'+source+'", "'+a.html()+'", 0)');
 	});
 });
 
+function change(obj, str){
+	articleType = str;
+	$("#articleTypes").find("li").each(function(){
+		$(this).removeClass("active");
+	});
+	$(obj).parent().addClass("active");
+	
+	$("#article").parent().find("section").each(function(){
+		if($(this).attr('id')!="article"){
+			$(this).remove();
+		}
+	});
+}
+
 function loadMore(){
-	getArticles(source, "热门", number);
+	getArticles(source, articleType, number);
 }
 
 
