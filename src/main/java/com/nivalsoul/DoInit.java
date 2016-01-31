@@ -26,7 +26,7 @@ public class DoInit implements ApplicationListener<ContextRefreshedEvent> {
         			config.put("userName", ds.get("username"));
         			config.put("password", ds.get("password"));
         			//启动文章抓取任务定时器
-        			Gongzhonghao.startTimer(config, 6, 1, 0);
+        			//Gongzhonghao.startTimer(config, 6, 1, 0, 24*60*60*1000);
         		}
         	} catch (Exception e) {
         		e.printStackTrace();

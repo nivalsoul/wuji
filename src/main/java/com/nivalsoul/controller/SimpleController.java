@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.nivalsoul.ApplicationConfig;
+import com.nivalsoul.webspider.techinfo.GetFrom36kr;
+import com.nivalsoul.webspider.techinfo.GetFromTmtpost;
+import com.nivalsoul.webspider.techinfo.Tuicool;
 import com.nivalsoul.webspider.weixin.Gongzhonghao;
 
 //@EnableAutoConfiguration
@@ -49,7 +52,10 @@ public class SimpleController {
 			config.put("userName", ds.get("username"));
 			config.put("password", ds.get("password"));
 			//启动文章抓取任务定时器
-			Gongzhonghao.startTimer(config, 6, 1, 0);
+			Gongzhonghao.startTimer(config, 23, 30, 0, 24*60*60*1000);
+			GetFrom36kr.startTimer(config, 22, 50, 0, 24*60*60*1000);
+			GetFromTmtpost.startTimer(config, 23, 01, 0, 24*60*60*1000);
+			Tuicool.startTimer(config, 6, 1, 0, 2*60*60*1000);
 			started = true;
 		}
 		return "文章抓取任务已启动...";
