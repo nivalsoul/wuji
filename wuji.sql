@@ -52,8 +52,9 @@ CREATE TABLE `article` (
   `source` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `reference_id` bigint(20) DEFAULT NULL COMMENT '引用文章id',
   `read_num` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18021 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `ArticleLink` (`article_link`,`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=135926 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Table structure for table `comment` */
 
@@ -71,7 +72,30 @@ CREATE TABLE `comment` (
   `ref_comment_id` bigint(20) DEFAULT NULL COMMENT '引用的评论id',
   `quotation` varchar(512) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '引用内容',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+/*Table structure for table `techinfo` */
+
+DROP TABLE IF EXISTS `techinfo`;
+
+CREATE TABLE `techinfo` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `article_title` varchar(128) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `article_content` longtext COLLATE utf8mb4_unicode_ci,
+  `author` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `author_link` varchar(512) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `pub_time` datetime DEFAULT NULL,
+  `comment_num` int(11) DEFAULT NULL,
+  `article_type` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `quotation` varchar(512) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '引用',
+  `original` tinyint(1) DEFAULT '1',
+  `article_link` varchar(512) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '文章链接',
+  `source` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `reference_id` bigint(20) DEFAULT NULL COMMENT '引用文章id',
+  `read_num` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `ArticleLink` (`article_link`)
+) ENGINE=InnoDB AUTO_INCREMENT=16667 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Table structure for table `userinfo` */
 
@@ -100,7 +124,7 @@ CREATE TABLE `userinfo` (
   `visit_num` int(11) DEFAULT '0' COMMENT '访问数',
   `follow_num` int(11) DEFAULT '0' COMMENT '关注数',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COMMENT='用户信息表';
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COMMENT='用户信息表';
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

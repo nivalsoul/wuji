@@ -3,7 +3,6 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.nivalsoul</groupId>
 	<artifactId>wuji</artifactId>
-	<packaging>war</packaging>
 	<version>1.0</version>
 	<name>wuji Maven Webapp</name>
 	<url>http://maven.apache.org</url>
@@ -164,4 +163,5 @@
 			</plugin>
 		</plugins>
 	</build>
+	<packaging>war</packaging>
 </project>

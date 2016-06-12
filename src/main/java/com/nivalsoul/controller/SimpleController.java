@@ -1,12 +1,19 @@
 package com.nivalsoul.controller;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -60,5 +67,32 @@ public class SimpleController {
 		}
 		return "文章抓取任务已启动...";
 	}
+	
+	@RequestMapping(value ="/file/{filename:.+}", method = RequestMethod.GET)
+    public void getDocumentFile(HttpServletResponse response,
+    		@PathVariable("filename") String filename){
+		
+		FileInputStream fis = null;
+	    response.setContentType("image/png");
+	    try {
+	        ServletOutputStream out = response.getOutputStream();
+	        File file = new File("G:/aa.png");
+	        fis = new FileInputStream(file);
+	        byte[] b = new byte[fis.available()];
+	        fis.read(b);
+	        out.write(b);
+	        out.flush();
+	    } catch (Exception e) {
+	         e.printStackTrace();
+	    } finally {
+	        if (fis != null) {
+	            try {
+	               fis.close();
+	            } catch (IOException e) {
+	            e.printStackTrace();
+	        }   
+	          }
+	    }
+    }
 
 }
