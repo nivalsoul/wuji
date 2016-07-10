@@ -172,6 +172,14 @@ function toReg(){
 	$("#loginDiv").hide();
 	$("#regDiv").show();
 	$("#myModalLabel").html("用户注册");
+	$("#regOrLogin").html('已有账号&nbsp;<a href="javascript:void(0)" onclick="toLogin()">现在登录</a>')
+}
+
+function toLogin(){
+	$("#loginDiv").show();
+	$("#regDiv").hide();
+	$("#myModalLabel").html("用户登录");
+	$("#regOrLogin").html('还没有账号&nbsp;<a href="javascript:void(0)" onclick="toReg()">立即注册</a>')
 }
 
 function toWrite(){
