@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.alibaba.fastjson.JSON;
 import com.nivalsoul.model.Article;
+import com.nivalsoul.model.TechInfo;
 import com.nivalsoul.service.ArticleManager;
 
 @Controller
@@ -101,5 +102,18 @@ public class ArticleController {
 		Article article = articleManager.getArticleById(id);
 		return article;
 	}  
+	
+	@RequestMapping(value="/itArticles", method = RequestMethod.GET)  
+	@ResponseBody
+	public Iterable<TechInfo> getITArticles(
+			@RequestParam(value = "source", defaultValue="原创") String source, 
+			@RequestParam(value = "article_type", required = false) String article_type, 
+			@RequestParam(value = "page", defaultValue="0") Integer page, 
+			@RequestParam(value = "size", defaultValue="10") Integer size){
+		log.info("get it articles by source:"+source+" and article_type:"+article_type);
+		return articleManager.findITArticles(source,article_type,
+				new PageRequest(page, size, Direction.DESC, "id"));
+	}  
+	
 	
 }

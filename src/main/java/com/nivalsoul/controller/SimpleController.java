@@ -76,7 +76,7 @@ public class SimpleController {
 	    response.setContentType("image/png");
 	    try {
 	        ServletOutputStream out = response.getOutputStream();
-	        File file = new File("G:/aa.png");
+	        File file = new File("G:/a.ico");
 	        fis = new FileInputStream(file);
 	        byte[] b = new byte[fis.available()];
 	        fis.read(b);
