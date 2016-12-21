@@ -149,6 +149,8 @@
             <artifactId>httpmime</artifactId>
             <version>4.5.1</version>
         </dependency>
+        
+        <!-- webspider位置：https://github.com/nivalsoul/webspider -->
 		<dependency>
 		    <groupId>com.nivalsoul</groupId>
 			<artifactId>webspider</artifactId>
