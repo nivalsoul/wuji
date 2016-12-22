@@ -12,6 +12,7 @@ import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,6 +34,9 @@ public class SimpleController {
 	
 	@Autowired
 	ApplicationConfig ac;
+	
+	@Autowired  
+	Environment e; 
 
 	@RequestMapping(value ="", method = RequestMethod.GET)
     @ResponseBody
@@ -45,6 +49,7 @@ public class SimpleController {
 		list.add(map);
 		list.add(map);
 		list.add(map);
+		System.out.println(e.getProperty("server.port"));
         return list;
     }
 	

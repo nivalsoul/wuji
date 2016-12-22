@@ -150,6 +150,13 @@
             <version>4.5.1</version>
         </dependency>
         
+        <!-- 使用H2 -->
+        <dependency>
+		    <groupId>com.h2database</groupId>
+		    <artifactId>h2</artifactId>
+		    <scope>runtime</scope>
+		</dependency>
+        
         <!-- webspider位置：https://github.com/nivalsoul/webspider -->
 		<dependency>
 		    <groupId>com.nivalsoul</groupId>
