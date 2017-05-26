@@ -1,6 +1,7 @@
-.classpath
-.project
-.settings
-target
-build
-bin
+/.classpath
+/.project
+/.settings
+/target
+/build
+/bin
+
